@@ -21,7 +21,7 @@ public class premRunner{
 		session.persist(pre);
 		tx.commit();
 		
-		
+		//////new code 
 		
 	}
 }

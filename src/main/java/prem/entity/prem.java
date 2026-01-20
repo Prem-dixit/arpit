@@ -1,7 +1,19 @@
 package prem.entity;
 
+
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity(name = "pree")
 public class prem {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
+	@Column(name = "e_Name")
 	String name;
 	String course;
 	int fees;

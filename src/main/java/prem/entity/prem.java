@@ -7,6 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+//import jakarta.persistence.Transient;
 
 @Entity(name = "pree")
 public class prem {
@@ -17,6 +18,8 @@ public class prem {
 	String name;
 	String course;
 	int fees;
+//	@Transient
+	private String country;
 	
 	
 	public prem() {
@@ -25,12 +28,13 @@ public class prem {
 	}
 	
 	
-	public prem( String name, String course, int fees) {
+	public prem( String name, String course, int fees,String country) {
 		super();
 		//this.id = id;
 		this.name = name;
 		this.course = course;
 		this.fees = fees;
+		this.country="country";
 	}
 	
 	
@@ -60,7 +64,7 @@ public class prem {
 	}
 	@Override
 	public String toString() {
-		return "prem [  name=" + name + ", course=" + course + ", fees=" + fees + "]";
+		return "prem [  name=" + name + ", course=" + course + ", fees=" + fees +",country="+country  + "]";
 	}
 	
 	

@@ -10,7 +10,7 @@ import prem.entity.prem;
 
 public class premRunner{
 	public static void main(String[] args) {
-		prem pre=new prem("renu","Female",64548);
+		prem pre=new prem("renu","Female",64548,"IND");
 		
 		//SessionFactory sessionFactory =premConfiguration.getSessionFactory();
 		

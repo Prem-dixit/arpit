@@ -16,10 +16,10 @@ public class prem {
 	int id;
 	@Column(name = "e_Name")
 	String name;
-	String course;
+	String gender;
 	int fees;
 //	@Transient
-	private String country;
+	 String country;
 	
 	
 	public prem() {
@@ -28,16 +28,26 @@ public class prem {
 	}
 	
 	
-	public prem( String name, String course, int fees,String country) {
+	public prem( String name, String gender, int fees,String country) {
 		super();
 		//this.id = id;
 		this.name = name;
-		this.course = course;
+		this.gender = gender;
 		this.fees = fees;
-		this.country="country";
+		this.country=country;
 	}
 	
 	
+	public String getCountry() {
+		return country;
+	}
+
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+
 	public int getId() {
 		return id;
 	}
@@ -51,10 +61,10 @@ public class prem {
 		this.name = name;
 	}
 	public String getCourse() {
-		return course;
+		return gender;
 	}
 	public void setCourse(String course) {
-		this.course = course;
+		this.gender = course;
 	}
 	public int getFees() {
 		return fees;
@@ -62,10 +72,14 @@ public class prem {
 	public void setFees(int fees) {
 		this.fees = fees;
 	}
+
+
 	@Override
 	public String toString() {
-		return "prem [  name=" + name + ", course=" + course + ", fees=" + fees +",country="+country  + "]";
+		return "prem [id=" + id + ", name=" + name + ", gender=" + gender + ", fees=" + fees + ", country=" + country
+				+ "]";
 	}
+	
 	
 	
 	
